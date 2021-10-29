@@ -1,0 +1,135 @@
+/* ─────────────────────────────────────────────────────────
+/* ------------------ C S S   S T A R T --------------------
+/* ───────────────────────────────────────────────────────── */
+
+/* ─── IMPORTATION ───────────────────────────────────────── */
+@import url("reset.min.css");
+
+/* ─── BASE ──────────────────────────────────────────────── */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+li {
+    list-style: none;
+}
+
+/* ─── LAYOUT ────────────────────────────────────────────── */
+#l-constrained{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+#l-header {
+   padding: 30px 0;
+   background-color: cornflowerblue;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li:not(:first-child) {
+    margin-left: 10px;
+}
+nav ul li a {
+    padding: 10px 25px;
+    opacity: 0.6;
+}
+nav ul li a:hover {
+    opacity: 1;
+}
+#l-content {
+    padding: 30px 0;
+}
+#l-footer {
+    padding: 30px 0;
+    background-color: rgb(44, 44, 44);
+}
+.copyright {
+    color: #fff;
+    text-align: center;
+}
+
+/* ─── MODULE ────────────────────────────────────────────── */
+.city-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.city-group .city {
+    padding: 50px 25px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.city-group .city .city-name {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.restaurant {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 15px;
+}
+.restaurant:nth-child(even) {
+    background-color: #ededed;
+}
+.restaurant .restaurant-infos {
+    display: flex;
+    flex-direction: column;
+}
+.restaurant .label {
+    font-weight: bold;
+}
+.restaurant .restaurant-name {
+    font-size: 1.5em;
+}
+.restaurant p {
+    
+}
+.restaurant img {
+    width: 150px;
+}
+
+/* ─── STATE ─────────────────────────────────────────────── */
+
+/* ─── THEME ─────────────────────────────────────────────── */
+
+/* ─── RESPONSIVE ────────────────────────────────────────── */
+@media screen and (max-width: 1200px) {
+
+}
+@media screen and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px) {
+
+}
+
+/* ─────────────────────────────────────────────────────────
+/* ------------------- C S S   E N D -----------------------
+/* ───────────────────────────────────────────────────────── */

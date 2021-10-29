@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+<div id="l-constrained">
+    <div class="city-group">
+        {% for ville in villes %}
+            <div class="city city-{{ ville.id }}">
+            <a href="/ville/{{ ville.nom }}"><h2 class="city-name">{{ ville.nom }}</h2></a>
+                {% for restaurant in ville.restaurants %}
+                    <div class="restaurant">
+                        <div class="restaurant-infos">
+                            <a href="/restaurant/{{ restaurant.nom }}"><h3 class="restaurant-name"><span class="label">Nom :</span> {{ restaurant.nom }}</h3></a>
+                            <p><span class="label">Adresse :</span> {{ restaurant.adresse }}</p>
+                            <p><span class="label">Propriétaire :</span> {{ restaurant.proprietaire.nom }} {{ restaurant.proprietaire.prenom }}</p>
+                        </div>
+                        <img src="{{ restaurant.image }}" alt="{{ restaurant.nom }}">
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

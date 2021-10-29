@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Restaurant{% endblock %}
+
+{% block body %}
+
+<div id="l-constrained">
+    <div class="single-restaurant">
+        {% if restaurant is empty %}
+            <p class="error">{{ error }}</p>
+        {% else %}
+            <div class="restaurant">
+                <div class="restaurant-infos">
+                    <h3 class="restaurant-name"><span class="label">Nom :</span> {{ restaurant.nom }}</h3>
+                    <p><span class="label">Adresse :</span> {{ restaurant.adresse }}</p>
+                    <p><span class="label">Propriétaire :</span> {{ restaurant.proprietaire.nom }} {{ restaurant.proprietaire.prenom }}</p>
+                </div>
+                <img src="{{ restaurant.image }}" alt="{{ restaurant.nom }}">
+            </div>
+        {% endif %}
+    </div> 
+</div>
+
+{% endblock %}
